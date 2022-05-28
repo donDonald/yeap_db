@@ -1,0 +1,9 @@
+# node packages
+node_modules/
+
+# Vim sp files
+*.swp
+
+# Hidden files
+.*
+
