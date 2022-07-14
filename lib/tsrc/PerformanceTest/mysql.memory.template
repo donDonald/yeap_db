@@ -2,8 +2,11 @@ CREATE TABLE %tableName%
 (
     id             INT         NOT NULL AUTO_INCREMENT,
     ts             TIMESTAMP   NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    user           CHAR(32)    NOT NULL,
+    value          CHAR(32)    NOT NULL,
     length         INT         NOT NULL,
-    PRIMARY KEY    (id)
+    PRIMARY KEY    (id),
+    INDEX          id(id),
+    INDEX          ts(ts),
+    INDEX          value(value)
 )
-ENGINE = InnoDB;
+ENGINE = MEMORY;
