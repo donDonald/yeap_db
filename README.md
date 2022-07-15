@@ -54,3 +54,15 @@ $ npm install
 $ npm test
 ```
 
+# Performance tests
+Here is also a set of performance tests for postgres and mysql.\
+Performance tests use connection pool in many configurations like 1 connection, 16 connections and 64 connections.\
+Than test awaits for 'slow' callbacks and stops.\
+Test metrics are stored to files.\
+To run these tests
+```
+$ cd yeap_db/lib/tsrc/PerformanceTest
+$ bash test.sh
+```
+***Launching tests will take few hours***
+
