@@ -1,0 +1,12 @@
+CREATE TABLE %tableName%
+(
+    id             SERIAL PRIMARY KEY,
+    ts             TIMESTAMP NOT NULL DEFAULT NOW(),
+    value          VARCHAR(32) NOT NULL,
+    length         INTEGER NOT NULL 
+);
+
+CREATE INDEX IF NOT EXISTS idx_%tableName%_id ON %tableName% (id);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_%tableName%_ts ON %tableName% (ts);
+CREATE INDEX IF NOT EXISTS idx_%tableName%_value ON %tableName% (value);
+
